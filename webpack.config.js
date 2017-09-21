@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     publicPath: '/assets/',
-    filename: 'bundle-[hash].js'
+    filename: process.env.NODE_ENV === 'production' ? 'bundle-[hash].js' : 'bundle.js'
   },
   module: {
     rules: [
@@ -51,7 +51,7 @@ module.exports = {
     new CleanWebpackPlugin(pathsToClean, cleanOptions),
     new HtmlWebpackPlugin({
       inject: true,
-      template: "./src/index.html"
+      template: process.env.NODE_ENV === 'production' ? "./src/index.production.html" : "./src/index.html"
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
