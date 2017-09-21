@@ -48,6 +48,7 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.EnvironmentPlugin(['NODE_ENV']),
     new CleanWebpackPlugin(pathsToClean, cleanOptions),
     new HtmlWebpackPlugin({
       inject: true,
