@@ -2,6 +2,7 @@ const webpack = require("webpack")
 const path = require("path")
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const pathsToClean = ["dist"]
@@ -53,6 +54,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: process.env.NODE_ENV === 'production' ? "./src/index.production.html" : "./src/index.html"
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'async'
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
