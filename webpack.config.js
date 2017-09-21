@@ -30,6 +30,12 @@ module.exports = {
         test: /\.sass$/,
         use: ["style-loader", "css-loader", "resolve-url-loader", "sass-loader"]
       },
+
+      // font-awesome
+      // {
+      //   test: /(font-awesome)+.scss?$/,
+      //   use: ["style-loader", "css-loader", "sass-loader"]
+      // },
       
       //** foundation; should not be using foundation js
       // {
