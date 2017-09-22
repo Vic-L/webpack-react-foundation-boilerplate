@@ -76,6 +76,7 @@ module.exports = {
       _src: path.resolve(__dirname, "src/"),
       _images: path.resolve(__dirname, "src/images/"),
       _stylesheets: path.resolve(__dirname, "src/stylesheets/"),
+      _utils: path.resolve(__dirname, "src/utils/"),
     }
   },
 };
