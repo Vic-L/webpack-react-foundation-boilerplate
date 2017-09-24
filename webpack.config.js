@@ -13,7 +13,7 @@ module.exports = {
     './src/index.js',
   ],
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist", "assets"),
     publicPath: '/assets/',
     filename: process.env.NODE_ENV === 'production' ? 'bundle-[hash].js' : 'bundle.js'
   },
