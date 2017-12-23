@@ -26,6 +26,8 @@ const App = () => {
 
     <Header/>
 
+    <p>Sample env variable is {process.env.SAMPLE}</p>
+
     <Switch>
       <Route
         exact

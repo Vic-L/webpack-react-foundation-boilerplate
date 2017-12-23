@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 const pathsToClean = ["dist"]
 const cleanOptions = {}
 
@@ -59,6 +60,7 @@ module.exports = {
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'async'
     }),
+    new Dotenv(),
     // new webpack.ProvidePlugin({
     //   $: "jquery",
     //   jQuery: "jquery"
